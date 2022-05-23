@@ -1,0 +1,9 @@
+# exclude artifacts and checkpoints
+/ckpt/
+/artifacts/
+# exclude .ipynb ehckpoints
+.ipynb_checkpoints
+# exlude other non-relevant files
+.DS_Store
+# exlcude MEND (for now)
+/mend/
