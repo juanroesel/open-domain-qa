@@ -7,3 +7,7 @@
 .DS_Store
 # exlcude MEND (for now)
 /mend/
+# virtualenv
+/venv/
+# project data
+/data/
