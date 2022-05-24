@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'odqabert.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'odqa_db',
+        "USER": "dev",
+        "PASSWORD": "dev",
+        'HOST': 'localhost',
+        'PORT': 5432
     }
 }
 
