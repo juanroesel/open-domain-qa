@@ -1,6 +1,13 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
+from rest_framework import routers
+from rest_framework.urlpatterns import format_suffix_patterns
+
+router = routers.SimpleRouter()
 
 urlpatterns = [
-    path('api/', views.call_model.as_view())
+    path('test/', views.test_model.as_view()),
+    path('api/', include(router.urls))
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)

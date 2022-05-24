@@ -7,11 +7,11 @@ from rest_framework import status
 from .apps import BertModelConfig
 
 
-class call_model(APIView):
+class test_model(APIView):
     """Testing view to test API requests calls to the QA BERT model."""
     def get(self, request):
         if request.method == 'GET':
-            # sentence is the query we want to get the prediction for
+            # question is the query we want to get the prediction for
             question = request.GET.get('question') + "?"
             context = "This is a dummy context to help test the API call"
             # predict method used to get the prediction
