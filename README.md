@@ -1,4 +1,4 @@
-# Basic open-domain QA system using BERT
+# Basic QA system using BERT
 
 This repo contains code to build a simple inference API using Django REST Framework to demonstrate question-answering through a DistilBERT QA model fine-tuned on the SQuAD dataset.
 
