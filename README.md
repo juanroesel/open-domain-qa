@@ -1,22 +1,34 @@
 # Basic open-domain QA system using BERT
 
+This repo contains code to build a simple inference API using Django REST Framework to demonstrate question-answering through a DistilBERT QA model fine-tuned on the SQuAD dataset.
+
+## Requirements
+* [Postgres](https://www.postgresql.org/download/) server installed and running locally
+* [Virtualenv](https://virtualenv.pypa.io/en/latest/)
+
 ## Instructions
 1. Clone the repository into a local folder
 ```
 $ git clone <repo url>
 ```
+2. Create a local postgres database with the following credentials:
+```
+NAME=odqa_db
+USER=dev
+PASSWORD=dev
+```
 
-2. Download `train`, `dev` and `test` files containing subset of SQUAD data into a `/data` directory at the root level - [Link to data](https://drive.google.com/drive/folders/1K0gkypdXDnHUZ0c8qgrWbRjN2vJnG4Hj?usp=sharin")
+3. Download `train`, `dev` and `test` files containing subset of SQUAD data into a `/data` directory at the root level - [Link to data](https://drive.google.com/drive/folders/1K0gkypdXDnHUZ0c8qgrWbRjN2vJnG4Hj?usp=sharin")
 
-3. Download the latest model checkpoint from this [folder](https://drive.google.com/drive/folders/1bGXP881qGySLorWQpMBHuuGWniByirU-?usp=sharing) and put it into a `ckpt` directory at the root level. 
+4. Download the latest model checkpoint from this [folder](https://drive.google.com/drive/folders/1bGXP881qGySLorWQpMBHuuGWniByirU-?usp=sharing) and put it into a `ckpt` directory at the root level. 
 
-4. Create a virtual environment and install dependencies
+5. Create a virtual environment and install dependencies
 ```
 $ virtualenv venv
 $ source venv/bin/activate
 $ (venv) pip install -r requirements.txt
 ```
-5. Navigate to the Django project directory `odqabert` and launch the Django development server
+6. Navigate to the Django project directory `odqabert` and launch the Django development server
 
 ``` 
 $ cd odqabert
